@@ -1,4 +1,4 @@
-const TaskItem = ({ task }) => {
+const TaskItem = ({ task, deleteTask }) => {
   return (
     <li className="{styles.task}">
       <div>
@@ -11,7 +11,7 @@ const TaskItem = ({ task }) => {
         <label htmlFor={task.id} className="{styles.label}">
           {task.name}
         </label>
-        <button>
+        <button onClick={()=>deleteTask(task.id)}>
             Delete Task
         </button>
       </div>

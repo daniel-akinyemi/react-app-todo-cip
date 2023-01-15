@@ -1,5 +1,5 @@
 import TaskItem from './TaskItem'
-const TaskList = ({tasks}) => {
+const TaskList = ({tasks, deleteTask}) => {
   return (
     <div>
       <div>TaskList</div>
@@ -8,6 +8,7 @@ const TaskList = ({tasks}) => {
           (<TaskItem
             key={task.id}
             task={task}
+            deleteTask={deleteTask}
             />)
         )}
       </ul>
